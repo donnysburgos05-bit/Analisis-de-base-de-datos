@@ -1,0 +1,15 @@
+<h1>Tareas</h1>
+
+<a href="/create-task/">Crear tarea</a>
+<br>
+<a href="/logout/">Logout</a>
+
+<ul>
+    {% for task in tasks %}
+        <li>
+            <a href="/tasks/{{ task.id }}/">
+                {{ task.title }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

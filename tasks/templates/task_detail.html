@@ -1,0 +1,17 @@
+<h1>Editar tarea</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button>
+        Actualizar
+    </button>
+</form>
+
+<form action="/tasks/{{task.id}}/delete/" method="POST">
+    {% csrf_token %}
+    <button>
+        Eliminar
+    </button>
+</form>

@@ -1,0 +1,10 @@
+<h1>Crear tarea</h1>
+
+<form action="/create-task/" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button>
+        Guardar
+    </button>
+</form>
